@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def element_at_my_list, idx):
-    if idx < o and idx  > (len(my_list - 1):
+def element_at(my_list, idx):
+    if idx < o and idx  > (len(my_list):
             return (none)
     return (my_list[idx])
