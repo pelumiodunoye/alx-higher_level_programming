@@ -1,1 +1,1 @@
-This is a readne for my first python project- hello world
+This directory documents the introductory aspect of high kevel programming. 
