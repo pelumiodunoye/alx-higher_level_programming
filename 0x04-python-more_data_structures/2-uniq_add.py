@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 
-from itertools import count
-from types import new_class
-
-
 def uniq_add(my_list=[]):
     new = []
     count = 0
