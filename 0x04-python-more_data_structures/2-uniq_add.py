@@ -15,11 +15,3 @@ def uniq_add(my_list=[]):
             new.append(my_list[c])
         count = 0
     return (sum(new))
-
-
-
-
-
-
-
-
