@@ -3,6 +3,6 @@
 def square_matrix_simple(matrix=[]):
     new = []
     for i in range(len(matrix)):
-        new2 = list(map(lambda x: x*x, matrix[i]))
-        new.append(new2)
+        n_ew = list(map(lambda x: x*x, matrix[i]))
+        new.append(n_ew)
     return (new)
