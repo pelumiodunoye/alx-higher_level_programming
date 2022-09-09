@@ -4,9 +4,6 @@ def drawtree(number):
         stars = "*" * noofstars
         emptyspace = " " * (number - x)
         
-        #logic
         print(emptyspace + stars + "*" + stars)
-        
-        
         
 drawtree(7)
