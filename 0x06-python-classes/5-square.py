@@ -56,6 +56,6 @@ class Square:
             print()
             return
         for i in range(self._Square__size):
-                for j in range(self._Square__size):
-                    print("#", end='')
+            for j in range(self._Square__size):
+                print("#", end='')
                 print()
