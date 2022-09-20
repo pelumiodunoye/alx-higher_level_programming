@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-
 """
 Contains the matrix_mul function
 """
-
 def matrix_mul(m_a, m_b):
-    
     """Multiply two matrices(lists of lists of integers/floats)"""
-     
     if type(m_a) is not list:
         raise TypeError("m_a must be a list")
     for i in m_a:
@@ -21,7 +17,6 @@ def matrix_mul(m_a, m_b):
             raise TypeError("m_a should contain only integers or floats")
     if content != len(m_a):
         raise TypeError("each row of m_a must be of the same size")
-    
     if type(m_b) is not list:
         raise TypeError("m_b must be a list")
     for i in m_b:
@@ -37,7 +32,6 @@ def matrix_mul(m_a, m_b):
         raise TypeError("each row of m_b must be of the same size")
     if content != content2:
         raise ValueError("m_a and m_b can't be multiplied")
-    
     matrix = []
     for i in range(content):
         new_matrix = []
