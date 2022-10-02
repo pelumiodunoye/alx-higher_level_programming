@@ -1,11 +1,10 @@
+
 #!/usr/bin/python3
 """
 this contains the rectangle function
 """
 
 
-from tempfile import gettempprefix
-from turtle import width
 from models.base import Base
 class Rectangle(Base):
     """contains class rectangle"""
@@ -14,10 +13,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """iniitializes function"""
         self.id = super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.__width = super().validate(width, "width")
+        self.__height = super().validate(height, "height")
+        self.__x = super().validate(x, "x")
+        self.__y = super().validate(y, "y")
 
 
     @property
@@ -29,7 +28,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """sets value for width"""
-        self.__width = value
+        self.__width = super().validate(value, "width")
 
 
     @property
@@ -41,7 +40,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """sets value for height"""
-        self.__height = value
+        self.__height = super().validate(value, "height")
 
 
     @property
@@ -53,7 +52,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """sets value for x"""
-        self.__x = value
+        self.__x = super().validate(value, "x")
 
 
     @property
@@ -65,4 +64,23 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """sets value for y"""
-        self.__y = value
+        self.__y = super().validate(value, "y")
+
+
+    def area(self):
+        """returns the  area value of the Rectangle instance"""
+        return (self.__width * self.__height)
+
+    def display(self):
+        """prints in stdout the Rectangle instance with the character #"""
+        row = self.__height
+        column = self.__width
+        for i in range(row):
+            for j in range(column):
+                print("#", end="")
+            print()
+
+    def __str__(self):
+        """returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                self.__x, self.__y, self.__width, self.__height))
