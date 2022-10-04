@@ -90,4 +90,4 @@ class Rectangle(Base):
             self.__y = super().validate(args[4], "y")
 
         except:
-            
+            return ValueError
