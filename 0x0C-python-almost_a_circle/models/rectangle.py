@@ -88,6 +88,5 @@ class Rectangle(Base):
             self.__height = super().validate(args[2], "height")
             self.__x = super().validate(args[3], "x")
             self.__y = super().validate(args[4], "y")
-
-        except:
-            return ValueError
+        except Exception:
+            pass
