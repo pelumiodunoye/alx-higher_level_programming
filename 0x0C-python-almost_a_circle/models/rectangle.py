@@ -21,7 +21,7 @@ class Rectangle(Base):
     @property
     def width(self):
         """retrieves the  width of the rectangle"""
-        return  (self.__width)
+        return (self.__width)
 
     @width.setter
     def width(self, value):
