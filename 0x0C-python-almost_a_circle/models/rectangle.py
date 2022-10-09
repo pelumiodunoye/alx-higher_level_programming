@@ -4,6 +4,7 @@ this contains the rectangle function
 """
 
 
+from re import X
 from models.base import Base
 
 
@@ -80,7 +81,7 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                 self.__x, self.__y, self.__width, self.__height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
         try:
             self.id = args[0]
@@ -90,3 +91,14 @@ class Rectangle(Base):
             self.__y = super().validate(args[4], "y")
         except Exception:
             pass
+        if not args:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.__width = super().validate(kwargs["width"], "width")
+            if "height" in kwargs:
+                self.__height = super().validate(kwargs["height"], "height")
+            if "x" in kwargs:
+                self.__x = super().validate(kwargs["x"], "x")
+            if "y" in kwargs:
+                self.__y = super().validate(kwargs["y"], "y")
