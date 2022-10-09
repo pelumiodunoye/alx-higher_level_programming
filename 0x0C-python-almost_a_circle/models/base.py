@@ -8,7 +8,6 @@ class Base:
     """class created successfully"""
     __nb_objects = 0
 
-
     def __init__(self, id=None):
         """comment not needed"""
         if id is not None:
