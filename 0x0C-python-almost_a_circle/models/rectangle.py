@@ -12,7 +12,7 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """iniitializes function"""
-        self.id = super().__init__(id)
+        super().__init__(id)
         self.__width = super().validate(width, "width")
         self.__height = super().validate(height, "height")
         self.__x = super().validate(x, "x")

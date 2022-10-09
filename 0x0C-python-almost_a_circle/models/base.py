@@ -16,7 +16,6 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-        return (self.id)
 
     def validate(self, value, name):
         """validates the name of the name of base input"""

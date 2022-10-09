@@ -1,23 +1,10 @@
 #!/usr/bin/python3
-""" Doc """
-from models.rectangle import Rectangle
+""" Check """
+from models.base import Base
 
-if __name__ == "__main__":
+b = Base()
+if b is None:
+    print("Can't create Base")
+    exit(1)
 
-    r1 = Rectangle(10, 10, 10, 10)
-    print(r1)
-
-    r1.update(89)
-    print(r1)
-
-    r1.update(89, 2)
-    print(r1)
-
-    r1.update(89, 2, 3)
-    print(r1)
-
-    r1.update(89, 2, 3, 4)
-    print(r1)
-
-    r1.update(89, 2, 3, 4, 5)
-    print(r1)
+print("OK", end="")
