@@ -18,3 +18,13 @@ class Square(Rectangle):
         """returns [Square] (<id>) <x>/<y> - <size>"""
         return ("[Square] ({}) {}/{} - {}" .format(
             self.id, self.x, self.y, self.width))
+
+    @property
+    def size(self):
+        """retrieves the value of size"""
+        return (self.width)
+
+    @size.setter
+    def size(self, value):
+        """sets value for width"""
+        self.width = super().validate(value, "width")
