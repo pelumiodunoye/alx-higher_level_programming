@@ -14,7 +14,7 @@ class Square(Rectangle):
 
     def __str__(self):
         """returns [Square] (<id>) <x>/<y> - <size>"""
-        super()
+        #super()
 
-        return ("[Square] () {}/{} - {}".format(
-                super().__x, Rectangle.__y, Rectangle.__width))
+        return ("[Square] ({}) {}/{} - {}" .format(
+            self.id, self.x, self.y, self.width))
