@@ -5,6 +5,8 @@ this contains the square function
 
 from models.base import Base
 from models.rectangle import Rectangle
+
+
 class Square(Rectangle):
     """contains class square that inheerits from rectangle"""
 
@@ -14,7 +16,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """returns [Square] (<id>) <x>/<y> - <size>"""
-        #super()
-
         return ("[Square] ({}) {}/{} - {}" .format(
             self.id, self.x, self.y, self.width))
