@@ -49,3 +49,14 @@ class Square(Rectangle):
                 self.x = super().validate(kwargs["x"], "x")
             if "y" in kwargs:
                 self.y = super().validate(kwargs["y"], "y")
+
+    def to_dictionary(self):
+        """dictionary representation of Square"""
+        dict = self.__dict__
+        dict = {
+                    "id": self.id,
+                    "size": super().width,
+                    "x": super().x,
+                    "y": super().y
+        }
+        return (dict)
