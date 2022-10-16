@@ -27,4 +27,25 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """sets value for width"""
+        self.height = super().validate(value, "width")
         self.width = super().validate(value, "width")
+
+
+    def update(self, *args, **kwargs):
+        """assigns an argument to each attribute"""
+        try:
+            self.id = args[0]
+            self.size = super().validate(args[1], "width")
+            self.x = super().validate(args[2], "x")
+            self.y = super().validate(args[3], "y")
+        except Exception:
+            pass
+        if not args:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.size = super().validate(kwargs["size"], "width")
+            if "x" in kwargs:
+                self.x = super().validate(kwargs["x"], "x")
+            if "y" in kwargs:
+                self.y = super().validate(kwargs["y"], "y")

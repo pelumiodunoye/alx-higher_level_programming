@@ -102,3 +102,7 @@ class Rectangle(Base):
                 self.__x = super().validate(kwargs["x"], "x")
             if "y" in kwargs:
                 self.__y = super().validate(kwargs["y"], "y")
+
+    def to_dictionary(self):
+        """dictionary representation of rectangle"""
+        
